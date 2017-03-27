@@ -1,0 +1,50 @@
+HTTrack3.48-22+htsswf+htsjava launched on Sat, 25 Mar 2017 08:18:55 at https://www.dialog.lk/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://www.dialog.lk/ -O1 "C:\Users\nithu\Music\SSS\SSS" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+08:21:57	Error: 	"Not Found" (404) at link https://www.dialog.lk/vendor/jquery-1.10.1.min.js (from https://www.dialog.lk/)
+08:21:58	Error: 	"Bad Request" (400) at link www.googletagmanager.com/gtm.js?id= (from https://www.dialog.lk/)
+08:27:52	Warning: 	Found for www.dialog.lk/robots.txt
+08:27:52	Warning: 	Redirected link is identical because of 'URL Hack' option: www.dialog.lk/robots.txt and https://www.dialog.lk/robots.txt
+08:27:52	Warning: 	Warning moved treated for www.dialog.lk/robots.txt (real one is https://www.dialog.lk/robots.txt)
+08:27:52	Warning: 	Found for www.dialog.lk/blog/
+08:27:52	Warning: 	Redirected link is identical because of 'URL Hack' option: www.dialog.lk/blog/ and https://www.dialog.lk/blog/
+08:27:52	Warning: 	File has moved from www.dialog.lk/blog/ to https://www.dialog.lk/blog/
+08:27:52	Warning: 	Found for www.dialog.lk/video/
+08:27:52	Warning: 	Redirected link is identical because of 'URL Hack' option: www.dialog.lk/video/ and https://www.dialog.lk/video/
+08:27:52	Warning: 	File has moved from www.dialog.lk/video/ to https://www.dialog.lk/video/
+08:29:04	Warning: 	Found for www.dialog.lk/crowd/
+08:29:04	Warning: 	Redirected link is identical because of 'URL Hack' option: www.dialog.lk/crowd/ and https://www.dialog.lk/crowd/
+08:29:04	Warning: 	File has moved from www.dialog.lk/crowd/ to https://www.dialog.lk/crowd/
+08:32:00	Warning: 	Found for www.dialog.lk/vtour/?utm_source=dialoglk&utm_campaign=dialoglk&utm_medium=homepage-medium&utm_content=Vtour
+08:32:00	Warning: 	Redirected link is identical because of 'URL Hack' option: www.dialog.lk/vtour/?utm_source=dialoglk&utm_campaign=dialoglk&utm_medium=homepage-medium&utm_content=Vtour and https://www.dialog.lk/vtour/?utm_source=dialoglk&utm_campaign=dialoglk&utm_medium=homepage-medium&utm_content=Vtour
+08:32:00	Warning: 	File has moved from www.dialog.lk/vtour/?utm_source=dialoglk&utm_campaign=dialoglk&utm_medium=homepage-medium&utm_content=Vtour to https://www.dialog.lk/vtour/?utm_source=dialoglk&utm_campaign=dialoglk&utm_medium=homepage-medium&utm_content=Vtour
+08:41:26	Warning: 	Found for www.dialog.lk/dlg/
+08:41:26	Warning: 	Redirected link is identical because of 'URL Hack' option: www.dialog.lk/dlg/ and https://www.dialog.lk/dlg/
+08:41:26	Warning: 	File has moved from www.dialog.lk/dlg/ to https://www.dialog.lk/dlg/
+08:41:35	Error: 	"Not Found" (404) at link https://www.dialog.lk/browse/coverageMapLocateUsModal.jsp (from https://www.dialog.lk/tourist-plans)
+08:41:35	Warning: 	Moved Temporarily for https://www.dialog.lk/mobile-plans-prepaid-per-minute-package/
+08:41:35	Warning: 	File has moved from https://www.dialog.lk/mobile-plans-prepaid-per-minute-package/ to http://www.dialog.lk/dlg
+08:44:00	Warning: 	Found for https://www.dialog.lk/dlg/mobile-products-and-services/
+08:44:00	Warning: 	File has moved from https://www.dialog.lk/dlg/mobile-products-and-services/ to https://dialog.lk/mobile-products-and-services/
+08:44:00	Warning: 	Found for https://www.dialog.lk/dlg/mobile-value-added-services/
+08:44:00	Warning: 	File has moved from https://www.dialog.lk/dlg/mobile-value-added-services/ to https://www.dialog.lk/mobile-value-added-services/
+08:44:00	Error: 	"Not Found" (404) at link https://www.dialog.lk/browse/myvideo.jpg (from https://www.dialog.lk/browse/ringInTones.jsp)
+08:44:01	Error: 	"Not Found" (404) at link https://www.dialog.lk/browse/js/jquery.min.js (from https://www.dialog.lk/browse/dialogGames.jsp)
+08:46:43	Warning: 	Retry after error 500 (Internal Server Error) at link https://www.dialog.lk/browse/gadgets/perDayTvPackagesNew/comparisionListManager.jsp?productID= (from https://www.dialog.lk/television-packages-per-day-tv)
+08:52:04	Error: 	"Forbidden" (403) at link https://www.dialog.lk/dialogdocroot/content/pdf/lesi/ (from https://www.dialog.lk/lesipay)
+08:52:31	Warning: 	Moved Permanently for www.dialog.lk/chat/
+08:52:31	Warning: 	File has moved from www.dialog.lk/chat/ to http://chat.dialog.lk/Dialog/Chat.htm
+08:53:35	Warning: 	Found for https://www.dialog.lk/dlg/navigation/gadgets/breadcrumbs/?categoryId=onlinecat1110007
+08:53:35	Warning: 	File has moved from https://www.dialog.lk/dlg/navigation/gadgets/breadcrumbs/?categoryId=onlinecat1110007 to https://dialog.lk/navigation/gadgets/breadcrumbs/?categoryId=onlinecat1110007
+08:53:36	Error: 	"Error when decompressing" (-1) at link https://www.dialog.lk/katch (from https://www.dialog.lk/tv-go?utm_source=dialoglk&utm_campaign=dialoglk&utm_medium=homepage-medium&utm_content=TV-GO)
+09:01:24	Error: 	Exit requested by shell or user
+09:01:24	Error: 	Exit requested by shell or user
+* * MIRROR ABORTED! * *
+The current temporary cache is required for any update operation and only contains data downloaded during the present aborted session.
+The former cache might contain more complete information; if you do not want to lose that information, you have to restore it and delete the current cache.
+This can easily be done here by erasing the hts-cache/new.* files]

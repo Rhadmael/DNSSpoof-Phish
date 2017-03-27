@@ -1,0 +1,489 @@
+//email validation
+function validateEmail(emailTextboxId, errMsgBoxId) {
+
+	var email = document.getElementById(emailTextboxId);
+	var emailVal = email.value;
+	var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+	
+	var dataString = 'functionName=validateEmail&email=' + emailVal;
+	if(!checkNullAndMaxLength(emailTextboxId, 'email address', errMsgBoxId)){
+		return false;
+	}
+	$.ajax({
+		type : "POST",
+		url : "./FrontendValidations",
+		data : dataString,
+		success : function(data1) {
+			if (data1 == "exist") {
+				document.getElementById(errMsgBoxId).innerHTML = '';
+				document.getElementById(errMsgBoxId).style.display="none";
+
+			} else {
+				document.getElementById(errMsgBoxId).innerHTML = emailVal+ ' is not associated with a MyDialog account.';
+				document.getElementById(errMsgBoxId).style.display="block";
+				//alert("non exist");
+				return false;
+			}
+		}
+	});
+}
+
+// signup emailvalidation
+function validateSignupEmailAddress(emailTextboxId) {
+	var email = document.getElementById(emailTextboxId);
+	var emailVal = email.value;
+	var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+	
+	$(".error_note").html("");
+	
+	if (!filter.test(email.value)) {
+		email.value = '';
+		document.getElementById("emailErrMsg").innerHTML = 'Please enter a valid email address. This address will be used to communicate with you.';
+		document.getElementById("emailErrMsg").style.display="block";
+		return false;
+	}
+	
+	var dataString = 'functionName=CheckUsernameAndEmail&username=' + emailVal;
+	if(!checkNullAndMaxLength(emailTextboxId, 'email address','emailErrMsg')){
+		return false;
+	}
+	$.ajax({
+				type : "POST",
+				url : "./FrontendValidations",
+				data : dataString,
+				success : function(data1) {
+					if (data1 == "exist") {
+						email.value = '';
+						document.getElementById("emailErrMsg").innerHTML = emailVal+ '  is already associated with a MyDialog account.';
+						document.getElementById("emailErrMsg").style.display="block";
+						return false;
+					} else {
+						document.getElementById("emailErrMsg").innerHTML = '';
+						document.getElementById("emailErrMsg").style.display="none";
+					}
+				}
+			});
+	
+}
+
+// signup username validation
+function validateUsername(usernameTextboxId) {
+
+	var username = document.getElementById(usernameTextboxId);
+	var usernameVal = username.value;
+	var usernameLength = username.value.length;
+	var filter = /^[a-zA-Z0-9@_.]{6,30}$/;
+	if (usernameLength < 6 || usernameLength > 30) {
+		username.value = '';
+		alert('Please specify a user name of length between 6 and 30');
+		return false;
+	}
+	if (!filter.test(username.value)) {
+		username.value = '';
+		alert('Please do not use special characters such as #$%^^&*() for your user name.');
+		return false;
+	}
+	var dataString = 'functionName=CheckUsernameAndEmail&username=' + usernameVal;
+	$.ajax({
+		type : "POST",
+		url : "./FrontendValidations",
+		data : dataString,
+		success : function(data1) {
+			if (data1 == "exist") {
+				username.value = '';
+				alert('The username you specified is unavailable.');
+			} else {
+			}
+		}
+	});
+}
+
+// Password validation
+function validatePassword(passwordTextboxId, retypePasswordTextboxId, emailTextboxId,errorMsgBoxId) {
+
+	var password = document.getElementById(passwordTextboxId);
+	var retypePassword = document.getElementById(retypePasswordTextboxId);
+	var emailAddress = document.getElementById(emailTextboxId);
+
+	var passwordLength = password.value.length;
+	var retypePasswordLength = retypePassword.value.length;
+
+	$(".error_note").html("");
+	
+	if (password.value == emailAddress.value) {
+		password.value = '';
+		document.getElementById(errorMsgBoxId).innerHTML = 'Please specify a password which does not equal to email address.';
+		document.getElementById(errorMsgBoxId).style.display="block";
+		return false;
+	}
+	if (passwordLength < 6 || passwordLength > 32) {
+		password.value = '';
+		document.getElementById(errorMsgBoxId).innerHTML = 'Please specify a password of length between 6 and 32.';
+		document.getElementById(errorMsgBoxId).style.display="block";
+		return false;
+	}
+	/*if (retypePasswordLength > 0 && password.value != retypePassword.value) {
+		password.value = '';
+		retypePassword.value = '';
+		document.getElementById(errorMsgBoxId).innerHTML = 'Passwords mismatched. Please type in the same password in each password field.';
+		document.getElementById(errorMsgBoxId).style.display="block";
+		return false;
+	}*/
+	document.getElementById(errorMsgBoxId).innerHTML = '';
+	document.getElementById(errorMsgBoxId).style.display="none";
+	
+
+}
+
+// Retype Password validation
+function validateRetypePassword(passwordTextboxId, retypePasswordTextboxId,errorMsgBoxId) {
+
+	var password = document.getElementById(passwordTextboxId);
+	var retypePassword = document.getElementById(retypePasswordTextboxId);
+
+	$(".error_note").html("");
+	
+	if (password.value != retypePassword.value) {
+		retypePassword.value = '';
+		document.getElementById(errorMsgBoxId).innerHTML = 'Passwords mismatched. Please type in the same password in each password field.';
+		document.getElementById(errorMsgBoxId).style.display="block";
+		return false;
+	}
+	document.getElementById(errorMsgBoxId).innerHTML = '';
+	document.getElementById(errorMsgBoxId).style.display="none";
+
+}
+
+
+function loginCheckNullandGiveError(){
+	for ( var i = 0; i < arguments.length; i++) {
+		var element = document.getElementById(arguments[i]);
+		if (element.value == "" || element.value.length == 0) {
+			document.getElementById("errMsg").innerHTML="Please fill required fields.";
+			document.getElementById("errMsg").style.display="block";
+			return false;
+		}
+	}
+	for ( var i = 0; i < arguments.length; i++) {
+		var element = document.getElementById(arguments[i]);
+		element.readOnly = true;
+	}
+}
+
+function validatePhoneNo(phoneNoTextboxId,fieldName,errorTextId) {
+	var phoneNo = document.getElementById(phoneNoTextboxId);
+	var filter = /^[0-9+-]{9,15}$/;	
+	if (phoneNoTextboxId=="txtDtvAccNo"){
+		filter = /^[0-9+-]{8}$/;
+	}
+	
+	if(phoneNo.value.length>10)
+		{
+		phoneNo.value = '';
+		document.getElementById(errorTextId).innerHTML='Please enter valid '+fieldName+'.';
+		document.getElementById(errorTextId).style.display="block";
+		return false;
+		}
+	
+	if (phoneNo.value!="" && !filter.test(phoneNo.value)) {
+		phoneNo.value = '';
+		document.getElementById(errorTextId).innerHTML='Please enter valid '+fieldName+'.';
+		document.getElementById(errorTextId).style.display="block";
+		return false;
+	}	
+	if(phoneNo.value.length==9)
+		{
+		  if (phoneNo.value.match(/^(0)/)) {
+			  phoneNo.value = '';
+			  document.getElementById(errorTextId).innerHTML='Please enter valid '+fieldName+'.';
+			  document.getElementById(errorTextId).style.display="block";
+			  return false;
+			}			 
+		}
+	document.getElementById(errorTextId).innerHTML='';
+	document.getElementById(errorTextId).style.display="hide";
+	return false;
+}
+
+function validateIdNo(IdTypeTextboxId, IdNoTextboxId) {
+	var idType = document.getElementById(IdTypeTextboxId);
+	var idNo = document.getElementById(IdNoTextboxId);
+	var idTypeVal = idType.value;
+	var idNoVal = idNo.value;
+	if (idTypeVal == "NIC" || idTypeVal == "nic") {
+		if(idNoVal!="" || idNoVal!=null){
+			var filter = /^[0-9]{9}[XVxv]$/;
+			//var pport =  /^[a-zA-Z]{1}[a-zA-Z0-9]{5}[0-9].*$/;
+			var pport =  /[^a-zA-Z0-9]/;
+			var filter2 = /^(20)[0-9]{2}[0|1|2|3|5|6|7|8]{1}[0-9]{2}[0-9]{5}$/;
+			var filter3 = /^(19)[0-9]{2}[0|1|2|3|5|6|7|8]{1}[0-9]{2}(0)[0-9]{4}$/;
+		if (!filter.test(idNoVal)) {
+			if(!filter2.test(idNoVal))
+			{
+				if(!filter3.test(idNoVal))
+				{
+			if(pport.test(idNoVal))
+			{
+				idNo.value = '';						
+				return false;
+			}				
+}
+		}
+	}
+}
+	}
+}
+
+function validateNationality(nationalityId){
+	var nationalityVal = document.getElementById(nationalityId).value;
+	var filter = /^[a-zA-Z ]{1,100}$/;
+	if (!filter.test(nationalityVal)) {
+		document.getElementById(nationalityId).value = '';
+		alert('Please enter valid nationality.');
+		return false;
+	}
+}
+
+function noBack() {
+	window.history.forward();
+}
+
+function checkNullAndMaxLength(TextboxId, valueName, errorMessageBoxId) {
+	var selectedTextbox = document.getElementById(TextboxId);
+	var textboxValLength = selectedTextbox.value.length;
+	if (textboxValLength < 1 || textboxValLength > 255) {
+		selectedTextbox.value = '';
+		document.getElementById(errorMessageBoxId).innerHTML = 'Please specify a '+valueName + ' of length between 1 and 256.';
+		document.getElementById(errorMessageBoxId).style.display='block';
+		return false;
+	}
+	else {
+		document.getElementById(errorMessageBoxId).innerHTML = '';
+		document.getElementById(errorMessageBoxId).style.display="none";
+		return true;
+	}
+}
+
+
+function checkMaxLength(TextboxId, valueName,maxLength,errorMessageBoxId) {
+	var selectedTextbox = document.getElementById(TextboxId);
+	var textboxValLength = selectedTextbox.value.length;
+	var maxLngth = maxLength;
+	if (textboxValLength > maxLngth) {
+		document.getElementById(errorMessageBoxId).innerHTML = 'Please specify a '+valueName + ' of length between 1 and '+maxLength+'.';
+		document.getElementById(errorMessageBoxId).style.display='block';
+		return false;
+	}else{
+		document.getElementById(errorMsgBoxId).innerHTML = '';
+		document.getElementById(errorMsgBoxId).style.display="none";
+	}
+}
+
+function checkMaxLengthErr(TextboxId, valueName,maxLength,errorMessageBoxId) {
+	var selectedTextbox = document.getElementById(TextboxId);
+	var textboxValLength = selectedTextbox.value.length;
+	var maxLngth = maxLength;
+	if (textboxValLength > maxLngth) {
+		document.getElementById(errorMessageBoxId).innerHTML = 'Please specify a '+valueName + ' of length between 1 and '+maxLength+'.';
+		document.getElementById(errorMessageBoxId).style.display='block';
+		return false;
+	}else{
+		document.getElementById(errorMsgBoxId).innerHTML = '';
+		document.getElementById(errorMsgBoxId).style.display="none";
+	}
+}
+
+function pageLoad() {
+	var StringData = "signupPage";
+	$.ajax({
+		type : "POST",
+		url : "./UserSessionManager",
+		data : StringData,
+		success : function(data1) {
+			if (data1 != null) {
+				document.location.href = '../' + data1;
+			} else {
+			}
+		}
+	});
+}
+
+// username validation without userExist
+function validateUpdateProfileUsername(usernameTextboxId,errMsgBoxId) {
+
+	var username = document.getElementById(usernameTextboxId);
+	var usernameVal = username.value;
+	var usernameLength = username.value.length;
+	var filter = /^[a-zA-Z0-9@_.\-]{1,100}$/;
+	//var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+	if (usernameLength < 1 || usernameLength > 100) {
+		username.value = '';
+		document.getElementById(errMsgBoxId).innerHTML = 'Please specify a user name of length between 1 and 100.';
+		document.getElementById(errMsgBoxId).style.display="block";
+		return false;
+	}
+	if (!filter.test(username.value)) {
+		username.value = '';
+		document.getElementById(errMsgBoxId).innerHTML = 'Please do not use special characters such as #$%^^&*() for your user name.';
+		document.getElementById(errMsgBoxId).style.display="block";
+		return false;
+	}
+	document.getElementById(errMsgBoxId).style.display="none";
+}
+
+
+
+
+//Password validation
+function validateUpdateOldPassword(passwordTextboxId,username,errorMsgBoxId) {
+
+	var password = document.getElementById(passwordTextboxId);
+	//var retypePassword = document.getElementById(retypePasswordTextboxId);
+
+	var passwordLength = password.value.length;
+	//var retypePasswordLength = retypePassword.value.length;
+
+	//document.getElementById(errorMsgBoxId).innerHTML = '';
+	//document.getElementById(errorMsgBoxId).style.display="none";
+	
+	var dataString = 'functionName=isValidPassword&username=' + username+'&password='+password.value;
+	$(errorMsgBoxId).html('');
+	$(errorMsgBoxId).hide();
+	
+	$('.loading').show();
+	
+	$.ajax({
+		type : "POST",
+		url : "./FrontendValidations",
+		data : {"functionName":"isValidPassword",
+				"username" : username,
+				"password" : password.value},
+		success : function(data1) {
+			$('.loading').hide();
+			if (data1 == "exist") {
+				//email.value = '';
+				
+				//alert("exist");
+			} else {
+				password.value = '';
+				$(errorMsgBoxId).html('Invalid current password.');
+				$(errorMsgBoxId).show();
+				//alert("non exist");
+				return false;
+			}
+		},
+		error : function (error){
+			$('.loading').hide();
+			//alert("Error "+error);
+		}
+	});
+	
+	/*if (passwordLength < 6 || passwordLength > 32) {
+		password.value = '';
+		document.getElementById(errorMsgBoxId).innerHTML = 'Please specify a password of length between 6 and 30.';
+		document.getElementById(errorMsgBoxId).style.display="block";
+		return false;
+	}
+	if (retypePasswordLength > 0 && password.value != retypePassword.value) {
+		password.value = '';
+		retypePassword.value = '';
+		document.getElementById(errorMsgBoxId).innerHTML = 'Passwords mismatched. Please type in the same password in each password field.';
+		document.getElementById(errorMsgBoxId).style.display="block";
+		return false;
+	}*/
+}
+
+//Password validation
+function validateUpdateNewPassword(userName, email, passwordTextboxId, retypePasswordTextboxId, oldPasswordTextId,errorMsgBoxId) {
+
+	var password = document.getElementById(passwordTextboxId);
+	var retypePassword = document.getElementById(retypePasswordTextboxId);
+	var oldPassword = document.getElementById(oldPasswordTextId);
+	
+	var passwordLength = password.value.length;
+	var retypePasswordLength = retypePassword.value.length;
+
+	document.getElementById(errorMsgBoxId).innerHTML = '';
+	document.getElementById(errorMsgBoxId).style.display="none";
+	
+	$(".error_note").html("");
+	
+	if(password.value==userName){
+		password.value = '';
+		document.getElementById(errorMsgBoxId).innerHTML = 'New password is match with username. Please type different password from username.';
+		document.getElementById(errorMsgBoxId).style.display="block";
+		return false;
+	}
+	
+	if(password.value===email){
+		password.value = '';
+		document.getElementById(errorMsgBoxId).innerHTML = 'New password is match with email address. Please type different password from email address.';
+		document.getElementById(errorMsgBoxId).style.display="block";
+		return false;
+	}
+	
+	if(password.value===oldPassword.value){
+		password.value = '';
+		document.getElementById(errorMsgBoxId).innerHTML = 'New password is match with current password. Please type different password from current password.';
+		document.getElementById(errorMsgBoxId).style.display="block";
+		return false;
+	}
+	
+	if (retypePasswordLength > 0 && password.value != retypePassword.value) {
+		retypePassword.value = '';
+		if (passwordLength < 6 || passwordLength > 32) {
+			password.value = '';
+			document.getElementById(errorMsgBoxId).innerHTML = 'Please specify a password of length between 6 and 32';
+			document.getElementById(errorMsgBoxId).style.display="block";
+			return false;
+		}
+		document.getElementById(errorMsgBoxId).innerHTML = 'Passwords mismatched. Please type in the same password in each password field.';
+		document.getElementById(errorMsgBoxId).style.display="block";
+		return false;
+	}
+
+	if (passwordLength < 6 || passwordLength > 32) {
+		password.value = '';
+		document.getElementById(errorMsgBoxId).innerHTML ='Please specify a password of length between 6 and 32';
+		document.getElementById(errorMsgBoxId).style.display="block";
+		return false;
+	}
+}
+
+function updateProfileValidation(){
+	
+	var agreed = document.getElementById(arguments[0]);
+	if(agreed.checked){
+	}
+	else{
+		alert('Please agree for conditions and terms before update the profile.');
+		return false;
+	}
+	
+	for ( var i = 1; i < arguments.length; i++) {
+		var element = document.getElementById(arguments[i]);
+		if (element.value == "" || element.value.length == 0) {
+			alert('Please fill required fields.');
+			return false;
+		}
+	}
+	return validateIdNo('textIdtype', 'textIdNo');
+	
+	for (var i = 1; i < arguments.length; i++) {
+		var element = document.getElementById(arguments[i]);
+		element.readOnly = true;
+	}
+	
+}
+
+function dateValidation(dateTextboxId){
+	var filter = /^(?:(?:31(\/|-|\.)(?:0?[13578]|1[02]))\1|(?:(?:29|30)(\/|-|\.)(?:0?[1,3-9]|1[0-2])\2))(?:(?:1[6-9]|[2-9]\d)?\d{2})$|^(?:29(\/|-|\.)0?2\3(?:(?:(?:1[6-9]|[2-9]\d)?(?:0[48]|[2468][048]|[13579][26])|(?:(?:16|[2468][048]|[3579][26])00))))$|^(?:0?[1-9]|1\d|2[0-8])(\/|-|\.)(?:(?:0?[1-9])|(?:1[0-2]))\4(?:(?:1[6-9]|[2-9]\d)?\d{2})$/;
+	var element = document.getElementById(dateTextboxId);
+	
+	if (!filter.test(element.value)) {
+		element.value = '';
+		alert('Please enter correct date format dd/mm/yyyy.');
+		return false;
+	}
+	
+}

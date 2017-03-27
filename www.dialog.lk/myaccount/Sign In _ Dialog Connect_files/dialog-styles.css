@@ -1,0 +1,207 @@
+/*Dialog Axiata PLC.*/
+@font-face {
+  font-family: 'Axiata_book';
+  src: url('../fonts/axiata_book-webfont.eot');
+  src: url('../fonts/axiata_book-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/axiata_book-webfont.woff') format('woff'), url('../fonts/axiata_book-webfont.ttf') format('truetype'), url('../fonts/axiata_book-webfont.svg#webfont') format('svg');
+}
+@font-face {
+  font-family: 'Axiata_bold';
+  src: url('../fonts/axiata_bold-webfont.eot');
+  src: url('../fonts/axiata_bold-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/axiata_bold-webfont.woff') format('woff'), url('../fonts/axiata_bold-webfont.ttf') format('truetype'), url('../fonts/axiata_bold-webfont.svg#webfont') format('svg');
+}
+@font-face {
+  font-family: 'Axiata_medium';
+  src: url('../fonts/axiata_medium.eot');
+  src: local('☺'), url('../fonts/axiata_medium.woff') format('woff'), url('../fonts/axiata_medium.ttf') format('truetype'), url('../fonts/axiata_medium.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+body{ margin:4% 0 0 0; padding:0; font-family: 'Axiata_book', sans-serif,Tahoma, Geneva; font-size:0.9em; color:#3f3f3f; background:#f7f7f7; letter-spacing:-0.03em;  }
+h1, h2, h3, h4, h5, p{ margin:0 0 15px 0; padding:0; font-weight:400;}
+h1{ font-size:1.2em; font-weight:700;}
+h2{ font-size:1.2em;}
+p{}
+ul{ margin:0 0 10px 0; list-style:none; padding:0;}
+ul li{ margin-bottom:10px;}
+a{ color:#368ddc;}
+a:hover{ color:#eb8b2d;}
+table{ border-collapse:collapse; padding:5px; border:none;}
+table td{ padding:5px; border-bottom:1px solid #ccc;}
+img{height:auto;  max-width: 100%; _max-width:inherit; _height:100%;}
+iframe {max-width: 100%;}
+a img{ border:none;}
+input{-webkit-appearance: none;}
+
+
+#Mobile-Connect{ max-width:800px; margin:auto;}
+
+	.MobileCon{ width:45%; float:left; border-right:1px solid #eaeaea; padding-right:4.8%; position:relative; min-height:380px;}
+	.MobileCon2{ width:45%;min-height:380px;}
+	/*buttons*/
+	.AshBut, .OrangeBut{ padding:8px 20px; text-align:center; color:#fff; display:block; margin:auto; border:none; border-radius:3px; font-size:1.2em;cursor: pointer;}
+		.OrangeBut{ background:#eb8b2d; min-width:120px;}
+	.OrangeBut:hover{ color: #ffffb3;box-shadow: 1px 2px 1px #cdcdb1;}
+		.OrangeBut_FixedWidth{ width:165.75px;}		
+	.AshBut{ background:#9b9b9b; min-width:100px;cursor: pointer;}
+	.AshBut:hover{ color: #ffffb3;box-shadow: 1px 2px 1px #cdcdb1;}
+	.ButtonsSec{ padding:10px 0; overflow:hidden; }	
+		.ButtonsSec input{float:right;}
+	
+	.Dialog-Logo{ margin:0 auto 50px auto; display:block;}
+	.MobileConLogo{ margin-top:19px!important;}
+	
+	.OR{ background:#dfdfdf; width:20px; height:20px; padding:8px; border-radius:50%; position:absolute; top:45%; right:-20px; text-align:center; font-size:0.8em; line-height:inherit; margin:0;}
+	#Footer{ background:#e6e6e6; padding:2%; clear:both; overflow:hidden;}
+
+	/*form*/
+	.FormSep{ margin-bottom:15px;}
+	label{font-weight:700; display:block; margin-bottom:3px;}
+	.Text{ border:2px solid #969696; border-radius:3px; padding:10px 5px; width:95%;}
+	.HelpTxt{ font-size:0.8em; color:#959595; text-align:right; margin-top:3px;}
+	
+	/*Mobile Connect Single*/
+	.MobileConSing{ background:#fff; border-radius:5px; overflow:hidden; max-width:400px; margin:auto auto 4% auto ;}
+	.Logos{ width:230px; margin:20px auto auto auto;}
+		.Logos .Dialog-Logo{ margin:0 20px 20px 0;}
+	
+	.MobileConSing h1{ padding-left:15px;}
+		.Content{ padding:5%;}
+		.MobileConSing #Footer{ background:none; border-top:1px solid #ccc;}
+		
+		.bullets li{ background:url(../images/bullet.png) no-repeat left 5px; padding-left:12px; margin-bottom:15px;}
+		.bullets li ul li{ background:none; font-size:0.95em; margin-bottom:5px;}
+		
+		.Identity{ background:url(../images/icons-2x.png) no-repeat left 5px; padding-left:30px; background-size:22px 117px; background:url(../images/icons.png) no-repeat left 5px\9; }
+		.Email{background:url(../images/icons-2x.png) no-repeat left -98px; background:url(../images/icons.png) no-repeat left -98px\9;padding-left:30px; background-size:22px 117px; }
+		
+		.OrangeTxt{ color:#eb8b26;}
+
+		.error_note {
+		  margin-top: 5px;
+		  font-size: 14px;
+		  font-size: 0.875rem;
+		  color: #d91f30;
+	}		
+
+/*Styles*/
+.Center-Img{ display:block; margin:auto;}
+.BorderB{ border-bottom:1px solid #606060; padding-bottom:20px; margin-bottom:30px;}
+.BorderL{border-left:1px solid #eaeaea; }
+.BorderT{border-top:1px solid #eaeaea; }
+.PurpBorder{ border-bottom:2px solid #585679; padding-bottom:3px;}
+.TextC{ text-align:center;}
+.TextL{ text-align:left;}
+.TextR{ text-align:right;}
+.Clear{ clear:both;}
+.Large{ font-size:1.4em; font-weight:700; line-height:1.5em;}
+.Small{ font-size:0.9em;}
+.Medium{font-size:1.2em; font-weight:700; }
+ 
+/*layout styles*/
+.Col2{ width:42%; float:left;}
+.PadL{ padding-left:8%;}
+.PadR{ padding-right:8%;}
+.PadT10{ padding-top:10px;}
+.MargT-10{ margin-top:10px;}
+.MargT-30{ margin-top:30px;}
+.MargL-10{ margin-left:10px;}
+.MargR-10{ margin-right:10px;}
+.MargL-20{ margin-left:20px;}
+.MargR-20{ margin-right:20px;}
+.MargL-30{ margin-left:30px;}
+.MargR-30{ margin-right:30px;}
+.MargL-40{ margin-left:40px;}
+.MargR-40{ margin-right:40px;}
+.MargL-50{ margin-left:50px;}
+.MargR-50{ margin-right:50px;}
+.MargL-410{ margin-left:410px;}
+.alignL{ float:left;}
+.alignR{ float:right;}
+
+#Mobile-Connect header h2{ text-align:center;}
+
+
+@media (max-width: 800px) {
+	#Mobile-Connect{ padding:0 2%;}
+	#Mobile-Connect header h2 { padding-left:10px; padding-right:10px;}
+}
+
+@media (max-width: 650px) {
+	#Mobile-Connect{ padding:0;}
+	
+	.Dialog-Logo{ max-width:100px; margin:0 auto 20px auto;}
+	.MobileCon{ width:92%; padding:20px 4%; float:inherit; border-right:none;  border-bottom:1px solid #eaeaea; min-height:inherit;  background:#fff; margin-bottom:40px;}
+	.OR{ bottom:-20px; right:45%; top:inherit; left:inherit; }
+	.Col2{ width:92%; padding:0 4%; float:inherit; }
+	
+	.FormSep{ max-width:360px; margin:auto auto 15px auto;}
+	
+	.Mobile{ display:none;}
+	.MobileConSing{ max-width:100%;}
+	.MobBk{ background:#fff;}
+	
+}
+
+.panel-title {
+  color: #eb8b2d;
+  font-size: 16px;
+  font-size: 1rem;
+}
+.partner_logo {
+  text-align: center;
+}
+.panel-title a:visited {
+  color: #a42d48;
+}
+.panel-title a:hover {
+  color: #a42d48;
+}
+.panel .chevron {
+  display: none;
+}
+.panel-collapse {
+  height: auto;
+  display: block;
+}
+
+h1,
+h3,
+h4,
+h5,
+h6 {
+  position: relative;
+  font-family: "Axiata", sans-serif;
+  font-weight: 600;
+  color: #000000;
+}
+h1 {
+  font-size: 36px;
+}
+h3 {
+  font-size: 21px;
+  font-size: 1.3125rem;
+}
+h3.big_title {
+  margin-bottom: 20px;
+  font-family: "Axiata", sans-serif;
+  font-weight: 400;
+  color: #d4d4d4;
+  font-size: 40px;
+  font-size: 2.5rem;
+}
+h4 {
+  font-size: 16px;
+  font-size: 1rem;
+}
+
+input[disabled='disabled'] {
+  background-color: #d4d4d4;
+}
+
+
+
+
+
+/*ANU*/

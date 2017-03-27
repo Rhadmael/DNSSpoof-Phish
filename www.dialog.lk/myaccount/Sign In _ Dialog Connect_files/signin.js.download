@@ -1,0 +1,19 @@
+function ajaxCall(url,redirectPath){
+	
+	$.ajax({
+		url: url,
+		type: 'post',
+	    crossDomain: true,
+	    dataType: 'jsonp',
+		success: function(data){
+			alert('Success'+data);
+			//window.location.replace(redirectPath);
+		},
+		error: function(error){
+			alert('Error '+error);
+			//window.location.replace(redirectPath);
+			//redirectCall(redirectPath);
+		}
+	});
+	
+}

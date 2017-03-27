@@ -1,0 +1,114 @@
+.FourBan img{height:auto;  max-width: 100%; _max-width:inherit; _height:100%;}
+.FourBan .Home-Col-6{ position:relative; width:50%; float:left;}
+.FourBan .Home-Col-6 img, .FourBan .Home-Col-3 img{ width:100%;}
+.FourBan .Home-Col-3{ position:relative; width:25%; float:left;}
+	.FourBan .Home-Col-3 h3{ font-size:1.2em; margin-top:0;}
+	.FourBan .Home-Col-3 a{ color:#fff; text-decoration:none;}
+	.FourBan .Home-Col-3 a:hover, .FourBan .Home-Col-3 a:focus{ opacity:0.5;}
+.FourBan a.WhiteBut{ background:#fff; border-radius:3px; padding:8px 15px; color:#333;} 
+.FourBan .Descripion1{ position:absolute; top:20px; left:30px; color:#fff; width:40%; } 
+.FourBan .Descripion2{ position:absolute; bottom:30px; right:30px; color:#fff; width:40%; } 
+.FourBan .Descripion3{ position: absolute; top: 0; right: 0;color: #fff; width: 100%; text-align: center;}
+.FourBan .Descripion3LM{ position:absolute; top:100px; left:30px; color:#fff; width:40%; } 
+.FourBan .Mobile{ display:none;}
+
+.SmallDescTop{position:absolute; top:10px; left:10px; color:#fff; width:90%; }
+.SmallDescBot{position:absolute; bottom:10px; left:10px; color:#fff; width:80%;}
+
+.Home-icons { padding:30px 0 50px 0; background:#f9f9f9; overflow:hidden;}
+.Home-icons ul{ list-style:none}
+.Home-icons ul li{ float:left; width:16.66%; text-align:center;}
+
+	.Home-icons i{display:block; margin:auto; min-height:120px;}
+	.Home-icons .MobilePhones{ width:48px; height:82px; background:url(images/home-icons.png) no-repeat left top;}
+	.Home-icons .MobilePlans{ width:99px; height:82px; background:url(images/home-icons.png) no-repeat left -157px;}
+	.Home-icons .HomeBB{ width:95px; height:85px; background:url(images/home-icons.png) no-repeat left -319px;}
+	.Home-icons .DTV{ width:84px; height:98px; background:url(images/home-icons.png) no-repeat left -478px;}
+	.Home-icons .Roaming{ width:104px; height:81px; background:url(images/home-icons.png) no-repeat left -659px;}
+	.Home-icons .Loyalty{ width:57px; height:82px; background:url(images/home-icons.png) no-repeat left -832px;}
+	
+	.FourBan .BlackText h3, .FourBan .BlackText p{ color:#000;}
+
+.HomeDevices .col-md-3 img{ display:block; margin:auto; }
+.HomeDevices .col-md-3{text-align:center;}
+.iframe iframe{ width:100%; height:312px;}
+.iframeFB iframe{ width:100%; height:700px;}
+.BlackTxt{ color:#333}
+
+/*slider*/
+.slider .wide-descrip{ width:450px!important;}
+/*.slider .wide-descrip h2, .slider .wide-descrip p{ color:#3a444b!important;}*/
+
+.slider .one{background-image: url(../images/page-banners/personal/missed-call-top-up-home.jpg);}
+.slider .two{background-image: url(../images/page-banners/personal/dialog-viu.jpg);}
+.slider .three{background-image: url(../images/page-banners/personal/peoples-award-2017.jpg);}
+.slider .four{background-image: url(../images/page-banners/personal/4g-homepage.jpg);}
+.slider .five{background-image: url(../images/page-banners/personal/chatpack-home.jpg);}
+
+.viu-wrap{ width:400px!important}
+.Learn-More-Marg{ margin-left:650px;}
+
+.WhatsHot{ background:#eee; border-top:1px solid #ccc; border-bottom:1px solid #ccc; overflow:hidden; color:#000;}
+    .WhatsHot .Wrap{max-width: 1165px; margin:auto; padding-left: 12.5px; padding-right: 12.5px;}
+	.WhatsHot .Wrap div{ float:left; padding:20px 0 0 0; width:75%;}
+	.WhatsHot h3 { margin-top:0;}
+	.WhatsHot img{ float:left; margin-right:15px;}
+
+
+@media (max-width: 1000px) {
+	.iframe iframe{ height:263px;}
+	.iframeFB iframe{ height:600px;}
+	.Learn-More-Marg{ margin-left:540px;}
+}
+@media (max-width: 800px) {
+	.FourBan .Descripion1, .FourBan .Descripion3LM{ top:10px; width:60%; } 
+	.FourBan .Descripion2{ bottom:10px; width:60%; } 
+	/*.slider .wide-descrip h2, .slider .wide-descrip p{ color:#fff!important;}*/
+	.Home-icons ul li{ float:left; width:33.33%; margin-bottom:20px;}
+	.iframe iframe{ height:218px;}
+		.iframeFB iframe{ height:400px;}
+	.FourBan .Home-Col-3{ width:50%;}	
+	
+		.WhatsHot img{ display:none;}
+		.WhatsHot .Wrap div{ width:100%;}
+		.Learn-More-Marg{ margin-left:415px;}
+}
+@media (max-width: 650px) {
+	.Learn-More-Marg{ margin-left:345px;}
+}
+@media (max-width: 650px) {
+	
+	.FourBan .Home-Col-6{ width:100%; }
+	.FourBan .Descripion1, .FourBan .Descripion2, .FourBan .Descripion3LM, .FourBan .Descripion3{ position:inherit; top:inherit; bottom:inherit; right:inherit; left:inherit; color:#63717a; width:100%; padding:0 10px 30px 10px; } 
+	.FourBan a.WhiteBut{ background:none; border-radius:none; padding:0; color:#3178ca; font-weight:700;} 	
+	.FourBan .Descripion1 h3, .FourBan .Descripion2 h3, .FourBan .Descripion3LM h3, .FourBan .Descripion3 h3{ font-size:18px; color:#ed1c24; font-weight:700; } 
+	.FourBan .Descripion3 { text-align:left;}
+	.FourBan .Mobile{ display:block;}
+	.Home-icons ul li{ float:left; width:50%;}
+	.headingLP{ margin-left:10px;}
+		.iframeFB iframe{ height:200px;}
+.slider .black-text{ color:#fff!important;}
+.slider .one{background-image: url(../images/page-banners/personal/missed-call-top-up-home-mobile.jpg);}
+.slider .two{background-image: url(../images/page-banners/personal/dialog-viu-mobile.jpg);}
+.slider .three{background-image: url(../images/page-banners/personal/peoples-award-2017-mobile.jpg);}
+.slider .four{background-image: url(../images/page-banners/personal/4g-homepage-mobile.jpg);}
+.slider .five{background-image: url(../images/page-banners/personal/chatpack-home-mobile.jpg);}
+
+
+.viu-wrap{ width:100%!important}
+.Learn-More-Marg{ margin-left:inherit;}
+
+
+.slider .flex-caption{     padding: 20px;     position: absolute;    bottom: -100px;    width: 100%;    background-color: #333;    min-height: 120px; }
+.slider .slides li{ margin-bottom:50px;}
+.slider .flex-caption div{clear:both; padding:10px; position:inherit!important;}
+.flex-control-nav{ bottom:-80px!important;}
+}
+@media (max-width: 480px) {
+	.FourBan .Home-Col-3{ width:100%;}
+	.iframeFB iframe{ height:150px;}
+}
+@media (max-width: 480px) {
+.slider .flex-caption>div{ width:100%!important;}	
+.slider .btn{ min-width:110px;}
+	}

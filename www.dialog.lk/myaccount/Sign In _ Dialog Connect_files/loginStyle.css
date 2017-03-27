@@ -1,0 +1,139 @@
+.header1Login{
+	margin: 20px;
+}
+
+.txtLogin{
+	width: 200px;
+	height: 20px;
+	margin-left: 20px;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	border-radius: 0px;
+}
+
+.btnLogin{
+	margin: 20px;
+}
+
+#loginContainer{
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top:auto;
+	margin-bottom:auto;
+	background-color: #FFFFFF;
+}
+
+.loginBody {
+	background-color: #eeeeee;
+}
+
+#labelVerificationError{
+	margin-left: 20px;
+	color:red;
+}
+
+.notification{
+	color:red;
+	display: none;
+}
+
+.captchaImage{
+	width: 150px;
+	height: 70px;
+	margin-left: 20px;
+	margin-top: 10px;
+	border-radius: 0px;
+}
+.captchaAudio{
+	width: 200px;
+	height: 30px;
+	margin-left: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border-radius: 0px;
+}
+.hiddenMsg {
+  color: green;
+}
+
+.system-message {
+	position: fixed;
+	top: 60px;
+	right: 0px;
+	left: 0px;
+	z-index: 101;
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box; /* Firefox, other Gecko */
+	box-sizing: border-box;
+	padding: 15px;
+	background-color: #FFBF4E;
+	opacity: 0.75;
+	filter: alpha(opacity =   40); /* For IE8 and earlier */
+	text-align: center;
+	display: none;
+}
+
+.singin-button{
+	border: none;
+	background: transparent;
+	cursor: pointer;
+}
+
+
+
+.ui-widget.success-dialog {
+    font-family: "Axiata", sans-serif;
+    font-weight: 400;
+}
+
+.ui-widget-content.success-dialog {
+    background: #F9F9F9;
+    border: 1px solid #722f54;
+    color: #222222;
+}
+
+.ui-dialog.success-dialog {
+    left: 0;
+    outline: 0 none;
+    padding: 0 !important;
+    position: absolute;
+    top: 0;
+}
+
+.ui-dialog.success-dialog .ui-dialog-content {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    overflow: auto;
+    position: relative;
+    padding: 0 !important;
+    margin: 0;
+}
+
+.ui-dialog.success-dialog .ui-widget-header {
+    background: #722f54;
+    border: 0;
+    color: #fff;
+    font-weight: normal;
+}
+
+.ui-dialog.success-dialog_2 .ui-widget-header {
+	background:none; border:none;
+	color:#333; font-weight:700;
+  
+  /*  background: #eb8b2d;
+    border: 0;
+    color: #fff;
+    font-weight: normal;*/
+}
+
+.ui-dialog.success-dialog .ui-dialog-titlebar {
+    padding: 0.1em .5em;
+    position: relative;
+    font-size: 1em;
+}
+
+.noclose .ui-dialog-titlebar-close
+{
+    display:none;
+}

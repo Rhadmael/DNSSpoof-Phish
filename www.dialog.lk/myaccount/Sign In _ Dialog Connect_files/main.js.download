@@ -1,0 +1,78 @@
+jQuery( document ).ready(function( $ ) {
+$( ".header" ).on( "click", ".menu_btn", function() {
+	if ( $( ".nav" ).is( ":hidden" ) ) {
+		$('.nav').slideDown();
+	} else {
+		$('.nav').slideUp();
+	}
+});
+
+$( ".nav" ).on( "click", ".user_menu", function(e) {
+	e.stopPropagation();
+	if ($( ".menu_chevron" ).hasClass( "icon-chevron-down" )){
+		$(".menu_chevron").removeClass('icon-chevron-down');
+		$(".menu_chevron").addClass('icon-chevron-up');
+	} else {
+		$(".menu_chevron").removeClass('icon-chevron-up');
+		$(".menu_chevron").addClass('icon-chevron-down');
+	}
+  $(this).toggleClass('open');
+});
+
+$( ".panel" ).on( "click", ".accordion-toggle", function() {
+	if ($(this).children('.chevron').hasClass( "icon-chevron-down" )){
+		$(this).children('.chevron').removeClass('icon-chevron-down');
+		$(this).children('.chevron').addClass('icon-chevron-up');
+	} else {
+		$(this).children('.chevron').removeClass('icon-chevron-up');
+		$(this).children('.chevron').addClass('icon-chevron-down');
+	}
+});
+
+window.history.forward();
+function noBack() { window.history.forward(); }
+
+});
+
+$(document).on("click",function(){
+	if ($( ".user_menu" ).hasClass( "open" )){
+		$(".chevron").removeClass('icon-chevron-up');
+		$(".chevron").addClass('icon-chevron-down');
+		$('.user_menu').toggleClass('open');
+	}
+});
+
+enquire.register("screen and (min-width:1000px)", {
+	match: function() {
+				$('.accordion-toggle').click(function (e) {
+					e.preventDefault();
+					e.stopPropagation();
+				});
+	},
+	unmatch: function() {
+		$('.accordion-toggle').click(function () {
+				
+			});
+		}
+});
+
+/*
+enquire.register("screen and (min-width:1000px)", {
+	match: function() {
+				$('.accordion-toggle').click(function (e) {
+					e.preventDefault();
+					e.stopPropagation();
+				});
+	},
+	unmatch: function() {
+		$('.accordion-toggle').click(function () {
+				
+			});
+		}
+	});
+	
+	
+});
+*/
+
+  

